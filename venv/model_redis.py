@@ -5,8 +5,12 @@ import redis
 import MySQLdb
 
 client =redis.Redis(host='127.0.0.1',port=6379,db=0)
-db = MySQLdb.connect("http://m56o8yzw.586.dnstoo.com",
-                     "xiyoulinux_f","xiyoulinux","xiyoulinux" )
+
+# 连接数据库
+db = MySQLdb.connect("m56o8yzw.586.dnstoo.com",
+                      "xiyoulinux_f","xiyoulinux","xiyoulinux" )
+
+
 
 # 设置name值
 # 有效值 api_id, api_name, version
@@ -95,7 +99,7 @@ def getTokenInfo(token):
                    oauth_sessions
                 INNER JOIN oauth_access_tokens ON oauth_access_tokens.session_id = oauth_sessions.id
                 WHERE
-                  oauth_access_tokens.id =  
+                  oauth_access_tokens.id =
                 # + str(token)
                 '04078pEXPddAa2NzDe0yi5nIA0xl9KApb8YoIGdB' '''
 
